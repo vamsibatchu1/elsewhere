@@ -330,7 +330,22 @@ export default function Home() {
                         : selectedWorld.name}
                     </h1>
                   </div>
-                  <p className="text-gray-400 text-lg font-cormorant">{selectedWorld.description}</p>
+                  <p className="text-gray-400 text-lg font-cormorant mb-6">{selectedWorld.description}</p>
+                  
+                  {/* Looping Video - Only for Subway */}
+                  {selectedWorld.id === 'subway-moving-train' && (
+                    <div className="w-full max-w-2xl mx-auto mt-24">
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-auto rounded-lg"
+                      >
+                        <source src="/images/subway.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                  )}
                 </div>
 
               </div>
